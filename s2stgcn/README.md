@@ -31,7 +31,7 @@ Before training and testing,
 the datasets should be preprocessed and converted to proper file structure.
 
 
-```
+
 Otherwise, for processing raw data by yourself,
 please refer to below guidances.
 
@@ -52,7 +52,7 @@ Once datasets ready, we can start the evaluation. -->
 For **cross-subject** evaluation in **FPHA**, run
 ```
 python main.py recognition -c config/s2stgcn/hand/test.yaml
-
+```
 
 
 To speed up evaluation by multi-gpu inference or modify batch size for reducing the memory cost, set ```--test_batch_size``` and ```--device``` like:
