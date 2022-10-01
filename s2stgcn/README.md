@@ -37,7 +37,7 @@ please refer to below guidances.
 
 #### FPHA
 FPHA can be downloaded from [their website](https://guiggh.github.io/publications/first-person-hands/).
-Only the **3D 3D Hand Pose** modality is required in our experiments. After that, this command should be used to build the database for training or evaluation:
+Only the **3D Hand Pose** modality is required in our experiments. After that, this command should be used to build the database for training or evaluation:
 ```
 python tools/fpha_gendata_hand_trtst.py --data_path <FPHA>
 ```
