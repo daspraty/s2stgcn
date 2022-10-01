@@ -1,0 +1,27 @@
+weights: /home/pratyusha/Pratyusha_workspace/project/src/office/st-gcn_handfast/new_test6_fast_SinglePreprocess_L_SPATIAL_vel/recognition/ntu-xsub/ST_GCN/epoch780_model.pt
+
+# feeder
+feeder: feeder.feeder.Feeder
+
+test_feeder_args:
+  data_path: ./data/FPHA/handfast_preprocessed/val_data3_1.npy
+  label_path: ./data/FPHA/handfast_preprocessed/val_label3_1.pkl
+
+
+
+
+# model
+model: net.st_gcn.Model
+model_args:
+  in_channels: 3
+  num_class: 45
+  dropout: 0.5
+  edge_importance_weighting: True
+  graph_args:
+    layout: 'fasthand'
+    strategy: 'spatial'
+
+# test
+phase: test
+device: [0]
+test_batch_size: 1
